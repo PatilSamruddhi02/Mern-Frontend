@@ -8,7 +8,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "dev": "vite",
-    "build": "vite build",
+"postinstall": "chmod +x node_modules/.bin/vite",
+  "build": "node node_modules/vite/bin/vite.js build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -59,6 +60,7 @@
     "vite": "^5.3.3"
   },
   "engines": {
-    "node": "20.x"
-  }
+  "node": ">=18.0.0",
+  "npm": ">=8.0.0"
+}
 }
