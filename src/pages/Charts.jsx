@@ -264,7 +264,7 @@ const Charts = () => {
 
   return (
     <div style={{ width: '90%', margin: '0 auto', marginTop: '850px' }}>
-      <h2 className='mb-4 text-5xl' style={{ textAlign: 'center' }}>Statistics Overview</h2>
+      <h2 className='mb-4 text-5xl mt-5' style={{ textAlign: 'center' }}>Statistics Overview</h2>
 
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '50px' }}>
         <div style={{ width: '80%', minWidth: '500px' }}>
