@@ -201,7 +201,8 @@ const AdminPage = () => {
  
 
   useEffect(() => {
-    fetchFeedbackList(); // Fetch feedback data when component mounts
+    setShowInitialImage(true); // Fetch feedback data when component mounts
+    setActiveSection(false);
   }, []);
 
   const fetchFeedbackList = async () => {
