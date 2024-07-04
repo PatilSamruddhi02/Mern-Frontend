@@ -263,7 +263,7 @@ const Charts = () => {
   };
 
   return (
-    <div style={{ width: '90%', margin: '0 auto', marginTop: '850px' }}>
+    <div style={{ width: '90%', margin: '0 auto', marginTop: '855px' }}>
       <h2 className='mb-4 text-5xl mt-5' style={{ textAlign: 'center' }}>Statistics Overview</h2>
 
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '50px' }}>
