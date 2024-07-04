@@ -22,7 +22,7 @@ const BookInquiryForm = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:8000/inquiries', {
+      const response = await fetch('https://mern-backend-jvx0.onrender.com/inquiries', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

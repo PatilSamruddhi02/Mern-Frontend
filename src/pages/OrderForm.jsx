@@ -31,7 +31,7 @@ const OrderForm = () => {
 
   const handleConfirmOrder = async (confirmedOrder) => {
     try {
-      const response = await axios.post('http://localhost:3001/orders', confirmedOrder);
+      const response = await axios.post('https://mern-backend-jvx0.onrender.com/orders', confirmedOrder);
       alert('Order placed successfully!');
       setOrderData({
         customerName: '',

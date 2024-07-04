@@ -18,7 +18,7 @@ const FeedbackForm = ({ toggleFeedbackForm }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:8000/submit-feedback', {
+      const response = await axios.post('https://mern-backend-jvx0.onrender.com/submit-feedback', {
         rating,
         name,
         address,

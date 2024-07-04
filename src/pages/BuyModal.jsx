@@ -72,7 +72,7 @@ const BuyModal = ({ book, onClose, onConfirm }) => {
   useEffect(() => {
     const fetchCustomer = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/users');
+        const response = await axios.get('https://mern-backend-jvx0.onrender.com/users');
         console.log('Customer data fetched:', response.data);
         // Assuming response.data is an array, pick the first customer for simplicity
         setCustomer(response.data[0]);
@@ -92,7 +92,7 @@ const BuyModal = ({ book, onClose, onConfirm }) => {
     }
 
     try {
-      const response = await axios.post('http://localhost:8000/api/purchases', {
+      const response = await axios.post('https://mern-backend-jvx0.onrender.com/api/purchases', {
         customerId: customer._id,
         customerName: customer.fullName,
         publisherName: book.publisher,

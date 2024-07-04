@@ -31,7 +31,7 @@ const Navbar = ({ handleOrderPopup }) => {
   useEffect(() => {
     const fetchLogoutCounts = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/logout-counts');
+        const response = await axios.get('https://mern-backend-jvx0.onrender.com/logout-counts');
         setLogoutCounts(response.data);
       } catch (error) {
         console.error('Error fetching logout counts:', error);

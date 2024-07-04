@@ -34,7 +34,7 @@ const AdminPage = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/users');
+        const response = await axios.get('https://mern-backend-jvx0.onrender.com/users');
         // Assuming backend returns users with loginTimes and logoutTimes
         setUsers(response.data.map(user => ({
           ...user,
@@ -52,7 +52,7 @@ const AdminPage = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/users');
+        const response = await axios.get('https://mern-backend-jvx0.onrender.com/users');
         setUsers(response.data);
       } catch (error) {
         console.error('Error fetching users:', error);
@@ -65,7 +65,7 @@ const AdminPage = () => {
   useEffect(() => {
     const fetchAllBooks = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/books');
+        const response = await axios.get('https://mern-backend-jvx0.onrender.com/books');
         setBooks(response.data);
       } catch (error) {
         console.error('Error fetching book data:', error);
@@ -87,13 +87,13 @@ const AdminPage = () => {
     try {
       if (updatedBookData._id) {
         // Update existing book
-        const response = await axios.put(`http://localhost:8000/books/${updatedBookData._id}`, updatedBookData);
+        const response = await axios.put(`https://mern-backend-jvx0.onrender.com/books/${updatedBookData._id}`, updatedBookData);
         setBooks(prevBooks =>
           prevBooks.map(book => book._id === updatedBookData._id ? response.data : book)
         );
       } else {
         // Add new book
-        const response = await axios.post('http://localhost:8000/books', updatedBookData);
+        const response = await axios.post('https://mern-backend-jvx0.onrender.com/books', updatedBookData);
         setBooks(prevBooks => [...prevBooks, response.data]);
       }
       setShowBookForm(false);
@@ -135,7 +135,7 @@ const AdminPage = () => {
 
   const editLoginTimes = async (userId, newLoginTimes) => {
     try {
-      await axios.put(`http://localhost:8000/users/${userId}/login-times`, { loginTimes: newLoginTimes });
+      await axios.put(`https://mern-backend-jvx0.onrender.com/users/${userId}/login-times`, { loginTimes: newLoginTimes });
       const updatedUsers = users.map(user => user._id === userId ? { ...user, loginTimes: newLoginTimes } : user);
       setUsers(updatedUsers);
     } catch (error) {
@@ -145,7 +145,7 @@ const AdminPage = () => {
 
   const deleteUser = async (userId) => {
     try {
-      await axios.delete(`http://localhost:8000/users/${userId}`);
+      await axios.delete(`https://mern-backend-jvx0.onrender.com/users/${userId}`);
       setUsers(users.filter(user => user._id !== userId));
     } catch (error) {
       console.error('Error deleting user:', error);
@@ -154,7 +154,7 @@ const AdminPage = () => {
 
   const deleteBook = async (bookId) => {
     try {
-      await axios.delete(`http://localhost:8000/books/${bookId}`);
+      await axios.delete(`https://mern-backend-jvx0.onrender.com/books/${bookId}`);
       setBooks(books.filter(book => book._id !== bookId)); // Update the state after deletion
     } catch (error) {
       console.error('Error deleting book:', error);
@@ -163,7 +163,7 @@ const AdminPage = () => {
 
   const handleShowBookDetailsClick = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/books');
+      const response = await axios.get('https://mern-backend-jvx0.onrender.com/books');
       setBooks(response.data);
       setActiveSection('bookDetails');
     } catch (error) {
@@ -174,7 +174,7 @@ const AdminPage = () => {
   const handleShowUserInquiriesClick = async () => {
     console.log('Show User Inquiries button clicked');
     try {
-      const response = await axios.get('http://localhost:8000/inquiries');
+      const response = await axios.get('https://mern-backend-jvx0.onrender.com/inquiries');
       console.log('User inquiries data:', response.data);
       setInquiries(response.data);
       setActiveSection('userInquiries');
@@ -186,7 +186,7 @@ const AdminPage = () => {
   const handleShowPurchaseDetailsClick = async () => {
     console.log('Attempting to fetch purchase details...');
     try {
-      const response = await axios.get('http://localhost:8000/api/purchases');
+      const response = await axios.get('https://mern-backend-jvx0.onrender.com/api/purchases');
       console.log('Purchase details data:', response.data);
       setPurchaseDetails(response.data); // Assuming setPurchaseDetails is a state setter
       setShowPurchaseDetails(true); // Assuming setShowPurchaseDetails is a state setter
@@ -206,7 +206,7 @@ const AdminPage = () => {
 
   const fetchFeedbackList = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/feedback-list');
+      const response = await axios.get('https://mern-backend-jvx0.onrender.com/feedback-list');
       setFeedbackList(response.data); // Update feedbackList state with fetched data
       setActiveSection('userFeedback'); // Set active section after fetching data
     } catch (error) {
@@ -241,7 +241,7 @@ const AdminPage = () => {
   };
   const editLogoutTimes = async (userId, newLogoutTimes) => {
     try {
-      await axios.put(`http://localhost:8000/users/${userId}/logout-times`, { logoutTimes: newLogoutTimes });
+      await axios.put(`https://mern-backend-jvx0.onrender.com/users/${userId}/logout-times`, { logoutTimes: newLogoutTimes });
       const updatedUsers = users.map(user => user._id === userId ? { ...user, logoutTimes: newLogoutTimes } : user);
       setUsers(updatedUsers);
     } catch (error) {

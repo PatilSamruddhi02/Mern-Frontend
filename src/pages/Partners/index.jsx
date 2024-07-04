@@ -20,7 +20,7 @@ const NewArrivals = () => {
   useEffect(() => {
     const fetchNewArrivals = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/books');
+        const response = await axios.get('https://mern-backend-jvx0.onrender.com/books');
         const allBooks = response.data.flatMap(publisher =>
           publisher.authors.flatMap(author =>
             author.books.map(book => ({

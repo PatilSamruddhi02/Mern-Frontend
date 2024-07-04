@@ -38,7 +38,7 @@ const BookList = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/books');
+        const response = await axios.get('https://mern-backend-jvx0.onrender.com/books');
         const allBooks = response.data.flatMap(publisher =>
           publisher.authors.flatMap(author =>
             author.books.map(book => ({
@@ -99,7 +99,7 @@ const BookList = () => {
   const handleConfirmOrder = async (book) => {
     try {
       // Send PATCH request to confirm order
-      await axios.patch(`http://localhost:8000/books/confirm/${book._id}`);
+      await axios.patch(`https://mern-backend-jvx0.onrender.com/books/confirm/${book._id}`);
 
       // Update UI: decrease available copies
       const updatedBooks = books.map((b) =>

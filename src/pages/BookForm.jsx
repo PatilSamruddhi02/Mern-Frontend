@@ -78,11 +78,11 @@ const BookForm = ({ book, onClose }) => {
       let response;
       if (book) {
         // Update existing book
-        response = await axios.put(`http://localhost:8000/books/${book._id}`, newBook);
+        response = await axios.put(`https://mern-backend-jvx0.onrender.com/books/${book._id}`, newBook);
         setSuccessMessage('Book updated successfully!');
       } else {
         // Add new book
-        response = await axios.post('http://localhost:8000/books', newBook);
+        response = await axios.post('https://mern-backend-jvx0.onrender.com/books', newBook);
         setSuccessMessage('Book added successfully!');
       }
 

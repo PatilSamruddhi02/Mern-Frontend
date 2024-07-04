@@ -95,7 +95,7 @@ const OrderPopup = ({ orderPopup, setOrderPopup, bookId, bookName, bookAuthor, b
     const userType = emailDomain === "numetry.com" ? "admin" : "user";
 
     try {
-      const response = await axios.post('http://localhost:8000/', { ...formData, userType });
+      const response = await axios.post('https://mern-backend-jvx0.onrender.com/', { ...formData, userType });
       console.log("Form submitted:", response.data);
       setSuccessMessage("Congratulations! You have signed up successfully.");
       setIsSuccessPopupOpen(true);
@@ -112,7 +112,7 @@ const OrderPopup = ({ orderPopup, setOrderPopup, bookId, bookName, bookAuthor, b
     if (!validateForm()) return;
 
     try {
-      const response = await axios.post('http://localhost:8000/login', {
+      const response = await axios.post('https://mern-backend-jvx0.onrender.com/login', {
         username: formData.username,
         password: formData.password,
         order: {
