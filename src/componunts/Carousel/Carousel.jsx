@@ -65,8 +65,8 @@ const CarouselBasicExample = () => {
   }, []); // Run this effect only once, when the component mounts
 
   return (
-    <div className="relative mt-35">
-      <div className="overflow-hidden relative w-full h-[700px]">
+    <div className="relative mt-20 ">
+      <div className="overflow-hidden relative mt-20 w-full h-[600px]">
         {carouselItems.map((item, index) => (
           <Transition
             key={item.id}
