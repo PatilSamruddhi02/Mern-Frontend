@@ -186,7 +186,7 @@ const BookList = () => {
       <nav className="bg-gradient-to-r from-primary to-secondary text-white p-2 fixed top-0 left-0 right-0 z-10">
       <div className="container flex justify-between items-center">
         <h1 className="text-white text-2xl flex items-center">
-          <img src={Store} alt="Logo" className="h-20 w-30" />
+          <img src={'https://www.indiabookstore.net/common/images/LogoShortSmall.png'} alt="Logo" className="h-20 w-30" />
         </h1>
         <div className="flex items-center space-x-4">
           <button

@@ -22,7 +22,7 @@ const BookInquiryForm = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://mern-backend-jvx0.onrender.com/inquiries')
+      const response = await fetch('https://mern-backend-jvx0.onrender.com/inquiries');
 
       const result = await response.json();
       if (response.ok) {

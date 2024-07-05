@@ -48,7 +48,7 @@ const Footer = () => {
                 {/* TravelloGo */}
               </h1>
               <p className="text-sm text-justify" >
-Welcome to PoloBooks Online Shop, your ultimate destination for discovering the world of literature. Dive into our extensive collection of books spanning genres from classic literature to contemporary fiction, non-fiction, thrillers, and more.
+Welcome to India Book Store, your ultimate destination for discovering the world of literature. Dive into our extensive collection of books spanning genres from classic literature to contemporary fiction, non-fiction, thrillers, and more.
 </p>
               <br />
               <div className="flex items-center gap-3 ">
